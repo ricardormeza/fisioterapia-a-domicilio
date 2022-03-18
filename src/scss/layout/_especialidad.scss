@@ -1,0 +1,12 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.especialidad{
+    h3{
+        text-align: center;
+    }
+
+    @include m.telefono{
+        margin-top: 6rem;
+    }
+}

@@ -1,0 +1,83 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.main{
+    background-image: url(/build/img/terapia-fisica.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include m.telefono{
+        background-position: 60% 56%;
+    }
+    @include m.tablet{
+        height: 600px;
+    }
+    @include m.desktop{
+        height: 800px;
+    }
+    .contenido-main{
+        display: grid;
+        @include m.grid(2, 2rem);
+
+        // width: 70%;
+
+        .contenido-main_texto{
+            // border: 1px solid red;
+            // margin-top: 25rem;
+            @include m.minitelefono{
+                margin-top: 1rem;
+            }
+            @include m.telefono{
+                // border: 2px solid green;
+                margin-top: 3rem;
+                
+            }
+            @include m.desktop{
+                margin-top: 25rem;
+            }
+            h1{
+                color: v.$morado;
+                font-size: 5rem;
+                @include m.minitelefono{
+                    font-size: 4rem;
+                }
+            }
+            p{
+                color: v.$negro;
+                font-weight: 500;
+                font-size: 2.4rem;
+            }
+        }
+    }
+    .main-cita a{
+        display: flex;
+        align-items: center;
+        blockquote{
+            color: v.$gris2;
+            font-size: 2rem;
+            margin: 1rem;
+        }
+        img{
+            color: v.$gris2;
+            width: 2.3rem;
+            height: 2.3rem;
+        }
+    }
+    .main-botones{
+        // border: 1px solid gold;
+        width: 400px;
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        @include m.minitelefono{
+            width: 90%;
+        }
+        @include m.telefono{
+            flex-direction: column;
+            width: 350px!important;
+        }
+        
+        
+    }
+}

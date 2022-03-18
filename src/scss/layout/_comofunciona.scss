@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.como-funciona{
+    background-image: url(/build/img/Banner-Inferior.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    @include m.tablet{
+        background-position: 35% 56%;
+        margin-top: 10rem;
+    }
+    @include m.telefono{
+        background-position: 25% 56%;
+        margin-top: 20rem;
+    }
+
+    .contenido-funciona{
+        display: grid;
+        @include m.grid(2, 2rem);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "funciona1 funciona2";
+            @include m.telefono{
+                grid-template-columns: 1fr;
+                grid-template-rows: 4.5fr 2.5fr;
+                grid-template-areas: 
+                    "funciona1"
+                    "funciona2";
+            }
+    }
+
+    .funiona--texto{
+        grid-area: funciona2;
+        width: 90%;
+        // text-align: right;
+        padding-top: 10rem;
+        padding-right: 2rem;
+        @include m.telefono{
+            width: 100%;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        h3{
+            text-align: center;
+            margin: 0;
+            color: v.$verde;
+            padding: 0;
+        }
+        p{
+            margin-bottom: 3rem;
+            color: black;
+            @include m.telefono{
+                padding: 5px;
+            }
+        }
+    }
+}

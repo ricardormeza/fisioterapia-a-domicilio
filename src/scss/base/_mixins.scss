@@ -1,8 +1,13 @@
 @use 'variables' as v;
 
 // MEDIA QUERIES
+@mixin minitelefono {
+    @media (max-width: v.$minitelefono){
+        @content;
+    }
+}
 @mixin telefono {
-    @media (min-width: v.$telefono){
+    @media (max-width: v.$telefono){
         @content;
     }
 }
@@ -27,7 +32,7 @@
 @mixin  grid($columnas, $espaciado) {
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);
-    gap: v.$espaciado;
+    gap: $espaciado;
 }
 
 @mixin resetear-lista {
