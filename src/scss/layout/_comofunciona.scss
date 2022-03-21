@@ -15,6 +15,9 @@
         background-position: 25% 56%;
         margin-top: 20rem;
     }
+    @include m.minitelefono{
+        margin-top: 26rem;
+    }
 
     .contenido-funciona{
         display: grid;
@@ -28,6 +31,9 @@
                 grid-template-areas: 
                     "funciona1"
                     "funciona2";
+            }
+            @include m.minitelefono{
+                grid-template-rows: 3.5fr 2.5fr;
             }
     }
 

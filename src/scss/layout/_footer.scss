@@ -1,0 +1,122 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    background-color: v.$fondo;
+    
+    h2{
+        color: v.$morado;
+        margin: 0;
+        @include m.telefono{
+            text-align: center;
+            padding-top: 2rem;
+        }
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+
+        &:hover{
+            color: v.$morado;
+        }
+    }
+    p{
+        color: white;
+    }
+
+    
+    .footer--grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        // grid-template-rows: 1fr;
+        grid-template-areas: 
+            "contacto direccion content1 redes";
+        color: white;
+        gap: 1rem;
+        @include m.telefono{
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.8fr 0.7fr 1fr 1fr;
+            grid-template-areas: 
+            "contacto" 
+            "direccion" 
+            "content1" 
+            "redes";
+        }
+        @include m.tablet{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+
+    .contacto{
+        padding-left: 1rem;
+        grid-area: contacto;
+
+        @include m.telefono{
+            padding-left: 0rem;
+            text-align: center;
+        }
+    }
+
+    .direccion{
+        grid-area: direccion;
+        @include m.tablet{
+            width: 200px;
+            margin-left: 15px;
+        }
+        p{
+            font-size: 2rem;
+            margin: 0;
+        }
+        @include m.telefono{
+            text-align: center;
+        }
+    }
+
+    .menu{
+        grid-area: content1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 10rem;
+        @include m.tablet{
+            margin-left: 14px;
+        }
+
+    }
+
+
+    .redes{
+        grid-area: redes;
+        display: flex;
+        flex-direction: column;
+        @include m.telefono{
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        a img{
+            width: 10%;
+            margin-left: 25rem;
+            margin-bottom: 20px;
+            @include m.telefono{
+                margin: 0;
+                width: 80%;
+            }
+            @include m.tablet{
+                width: 15%;
+                margin-left: 12rem;
+            }
+            @include m.desktop{
+                margin-left: 25rem;
+            }
+        }
+    }
+}
+
+.contacto--enlaces{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+}

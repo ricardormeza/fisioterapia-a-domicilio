@@ -22,7 +22,7 @@ function css ( done ){
         .pipe(sourcemaps.init())
         .pipe( plumber())
         .pipe( sass() )// COMPILAR
-        // .pipe(postcss([ autoprefixer(), cssnano() ]) )
+        .pipe(postcss([ autoprefixer(), cssnano() ]) )
         .pipe(sourcemaps.write('.'))
         .pipe( dest('build/css') ) //ALMACENAR EN DISCO DURO
     done();

@@ -1,0 +1,79 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.covid{
+    background-image: url(/build/img/Covid.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: 38%;
+    z-index: -1;
+    // border: 1px solid red;
+    @include m.tablet{
+        height: 27vh;
+    }
+    @include m.desktop{
+        height: auto;
+        margin-top: 3rem;
+    }
+
+
+
+    .covid-titulo{
+        h4{
+            margin: 1.4rem 0 -1rem 0;
+            font-size: 2.2rem;
+            width: 70%;
+            span{
+                color: v.$morado;
+            }
+        }
+        img{
+            width: 15%;
+        }
+    }
+}
+.covid-parrafos{
+    margin-left: 4rem;
+    @include m.tablet{
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    .covid-parrafos-imagen{
+        img{
+            margin-left: 40rem;
+            margin-top: -33rem;
+            width: 35%;
+            @include m.tablet{
+                margin-left: 23rem;
+                margin-top: -25rem;
+            }
+            @include m.telefono{
+                margin-left: 13rem;
+                margin-top: -32rem;
+            }
+        }
+    }
+}
+.covid-elementos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 40%;
+    // border: 2px solid green;
+    img{
+        width: 70%;
+        margin-left: 4rem;
+        margin-top: -7rem;
+        @include m.telefono{
+            margin-left: 4rem;
+            margin-top: 22rem;
+            width: 98%;
+        }
+        @include m.tablet{
+            margin-top: 0;
+        }
+        @include m.desktop{
+            margin-top: -97px;
+        }
+    }
+}

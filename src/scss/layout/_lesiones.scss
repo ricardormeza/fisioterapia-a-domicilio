@@ -1,0 +1,57 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.lesiones{
+    background-image: url(/build/img/Banner-Inferior-2.webp);
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    @include m.telefono{
+        height: 550px;
+        background-position: 84% 56%;
+    }
+    @include m.tablet{
+        background-position: 80% 56%;
+
+    }
+    .lesiones--contenido{
+        display: grid;
+        @include m.grid(2, 2rem);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "lesiones1 lesiones2";
+            @include m.telefono{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-template-areas: 
+                    "lesiones1"
+                    "lesiones2";
+            }
+    }
+
+    .lesiones1{
+        margin-top: 3rem;
+        margin-left: 2rem;
+        h2{
+            margin: 0;
+            color: v.$blanco;
+            span{
+                color: v.$morado;
+            }
+        }
+        p{
+            margin: 0;
+            color: v.$blanco;
+            line-height: 1.2rem;
+            @include m.telefono{
+                line-height: 1.5rem;
+                line-height: 3.4rem;
+            }
+            @include m.tablet{
+                margin-top: 4rem;
+                line-height: 1.4rem;
+            }
+        }
+    }
+}
