@@ -18,6 +18,9 @@
     @include m.minitelefono{
         margin-top: 26rem;
     }
+    @include m.tele{
+        margin-top: 50rem;
+    }
 
     .contenido-funciona{
         display: grid;

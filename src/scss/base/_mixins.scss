@@ -11,7 +11,11 @@
         @content;
     }
 }
-
+@mixin iphone12 {
+    @media (max-width: v.$iphone12){
+        @content;
+    }
+}
 @mixin tablet {
     @media (min-width: v.$tablet){
         @content;
@@ -26,6 +30,11 @@
 
 @mixin desktopXL {
     @media (min-width: v.$desktopXL){
+        @content;
+    }
+}
+@mixin tele {
+    @media (min-width: v.$tele){
         @content;
     }
 }

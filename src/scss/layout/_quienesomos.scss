@@ -16,6 +16,13 @@
             "somos1"
             "somos2";
     }
+    @include m.iphone12{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas: 
+            "somos1"
+            "somos2";
+    }
     // border: 1px solid black;
     padding-top: 9.3rem;
 
@@ -47,7 +54,7 @@
     grid-area: somos1;
 }
 .bg-azul{
-    background-image: url(/build/img/Fondo-para-Médico.webp);
+    background-image: url(/build/img/Fondo-para-Medico.webp);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;

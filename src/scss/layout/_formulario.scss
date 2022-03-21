@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+    background-image: url(/build/img/Fotografia-Formulario.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 800px;
+
+
+    fieldset{
+        margin-top: 3rem;
+    }
+    legend{
+        font-size: 2rem;
+        color: v.$morado;
+    }
+    label{
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+    }
+    input:not([type="submit"]),
+    textarea, select {
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        background-color: white;
+        border: 1px solid v.$gris;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        @include m.desktop{
+            width: 50%;
+        }
+        @include m.tablet{
+            width: 50%;
+        }
+        @include m.telefono{
+            width: 100%;
+        }
+        @include m.minitelefono{
+            width: 100%;
+        }
+    }
+    .btn-formulario{
+        margin: 2rem 0 0 2rem;
+        
+    }
+}

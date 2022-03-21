@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <title>Up Therapy | Clínica de fisioterapia en CDMX.</title>
+    <meta name="title" content="Up Therapy | Clínica de fisioterapia en CDMX.">
+    <meta name="description" content="Clínica de fisioterapia ubicada en CDMX donde te ayudamos en tu 
+    recuperación. Atendemos desde un dolor agudo hasta padecimientos crónicos.">
+    <meta name="keywords" content="Fisioterapia, fisioterapia online, fisioterapia a domicilio, diagnóstico
+    terapéutico, escagolfrío, dolor de espalda covid, Cansancio, Pecho, Médico, Ciática, dolor torácico,
+    Estrés, dolor de pecho y espalda">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://clinicadefisioterapiacdmx.com/">
+    <meta name="author" content="Up Therapy">
+    <meta name="Abstract" content="Mejor Clínica de Fisioterapia en CDMX">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/build/img/UpTherapy-ico.ico">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <a href="">
+                <img src="build/img/UpTherapy-logo.webp" alt="Up Therapy logotipo">
+            </a>
+            <div class="mobile-menu">
+                <img src="/build/img/icons8-menu-90.png" alt="icono menu responsive">
+            </div>
+            <nav class="navegacion ">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#somos1">Conocénos</a>
+                <a href="index.html#especialidades">Especialidades</a>
+                <a href="index.html#lesiones">Lesiones</a>
+                <a href="/">Formulario</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="formulario">
+        <form action="enviar.php" method="POST" class="formulario">
+            <fieldset>
+                <legend>Información personal</legend>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Tu email" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Tu telefono" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="5" required></textarea>
+            </fieldset>
+            <input type="submit" name="enviar" id="enviar" value="Enviar" class="boton morado btn-formulario">
+        </form>
+    </div>
+    
+    <footer class="footer">
+        <h2>Contáctanos</h2>
+        <div class="footer--grid">
+            <div class="contacto">
+                <div class="contacto--enlaces">
+                    <a href="mailto:tufisio@uptherapy.com.mx">tufisio@uptherapy.com.mx</a>
+                    <a href="tel:5547576392">Telefono: 55 47 57 63 92</a>
+                    <a href="tel:5547576392">WhatsApp: 55 11 77 58 05</a>
+                </div>
+            </div>
+            <div class="direccion">
+                <p>> Calzada Mariano Escobedo Ext. 543</p>
+                <p>Ciudad de México.</p>
+            </div>
+            <div class="menu">
+                <a href="/">Inicio.</a>
+                <a href="index.html">Inicio</a>
+                <a href="#somos1">Conocénos</a>
+                <a href="#especialidades">Especialidades</a>
+                <a href="#lesiones">Lesiones</a>
+            </div>
+            <div class="redes">
+                <a href="https://www.facebook.com/UpTherapyMX" target="blank"><img src="/build/img/facebook-icono-blanco.png" alt="icono clínica up therapy facebook"></a>
+                <a href="https://www.instagram.com/uptherapymx/" target="blank"><img src="/build/img/instgram-icono-blanco.png" alt="icono clínica up therapy instagram"></a>
+                <a href="https://api.whatsapp.com/send?phone=+525511775805" target="blank"><img src="/build/img/whatsapp-48.png" alt="icono clínica up therapy whatsapp"></a>
+            </div>
+        </div>
+        
+        
+    </footer>
+    <script src="build/js/app.js"></script>
+    <!-- <script src="build/js/splide.js"></script> -->
+    <script>
+        var splide = new Splide( '.splide', {
+            type   : 'loop',
+            perPage: 8,
+            focus  : 'center',
+            } );
+
+            splide.mount();
+    </script>
+</body>
+</html>
