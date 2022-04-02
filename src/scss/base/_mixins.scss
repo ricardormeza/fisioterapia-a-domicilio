@@ -12,7 +12,7 @@
     }
 }
 @mixin iphone12 {
-    @media (max-width: v.$iphone12){
+    @media (min-width: v.$iphone12){
         @content;
     }
 }

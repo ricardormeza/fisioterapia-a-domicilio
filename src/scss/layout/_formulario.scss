@@ -7,6 +7,9 @@
     background-position: center center;
     background-repeat: no-repeat;
     height: 800px;
+    @include m.telefono{
+        background-position: 72% 50%;
+    }
 
 
     fieldset{

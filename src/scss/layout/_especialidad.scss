@@ -13,4 +13,10 @@
     @include m.minitelefono{
         margin-top: 56rem;
     }
+    @include m.iphone12{
+        margin-top: 35rem;
+    }
+    @include m.tablet{
+        margin-top: 10rem;
+    }
 }
